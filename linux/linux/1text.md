@@ -28,3 +28,103 @@
 
 1. **Инициализация** - `git status` - показывает текущее состояние репризитория
 1. **Подготовка** - `git add .` - пдготовка (добавление) изменений
+1. **Фиксация** - `git commit -m 'Some message'`
+1. **Синхрониация** - удаленный копией текущего репрозитория - `git push` и `git pull`
+
+### Что можно сохранять в git?
+
+1. Любые текстовые файлы, объёмов < ~ 40 mb
+1. Изображения, документы, mp3, PDF, короткие видео и т.д
+1. Все имена файлов и каталогов только по-английски без пробелов и спец.символов!
+
+Плучить версию устанвленного Git:
+```shell
+git version
+```
+или
+```shell
+git --version
+```
+Получить справку
+```shell
+git help
+```
+**Сменить текстовый редактор по умолчанию**
+На `Micro` (проще для новичков)
+```shell
+git config --global core.editor "Micro"
+```
+На `Nano` (чууть сложнее)
+```shell
+git config --global core.editor "Nano"
+```
+На `VS Code` (элементарнее)
+```shell
+git config --global core.editor "code --wait"
+```
+**Представиться системе Git**
+Сообщить свой ник
+```shell
+git config --global user.name "Lomka"
+```
+Собщить свой эмейл
+```shell
+git config --global user.email "my_email@gmail.ru."
+```
+> **Если вы на чужом компьютере, то вместо `--global` используйе `--local`**
+
+#### Клонирование репозитория
+
+```shell
+git clone https://gitflic.ru/project/rurewa/mfua.git
+```
+Открыть папку конированного репозитория
+```shell
+cd folder_name
+```
+Получить статус текущего репозитория
+```shell
+git status
+```
+Поучить сстояние удаленного репзитория
+```shell
+git remote show origin
+```
+```shell
+git branch
+```
+```shell
+git branch --v
+```
+
+Получить список удаленных веток
+```shell
+git remote -v
+```
+Получить лог(общий)
+```shell
+git log
+```
+Получить лог изменений
+```shell
+git log -p
+```
+Выйти из режима логов - "Q"
+
+Получить хеши и их коммиты
+```shell
+git log --oneline
+```
+
+После внесения изменений (мдификаций) можно подготовить и закммитить результат
+```shell
+git add .
+```
+и
+```shell
+git commit -m 'Any changes'
+```
+Чтобы имеенить текст пследнего коммита
+```shell
+git commit --amend
+```
