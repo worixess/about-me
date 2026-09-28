@@ -129,3 +129,4 @@ git commit -m 'Any changes'
 ```shell
 git commit --amend
 ```
+Шото там
